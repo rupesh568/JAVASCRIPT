@@ -60,6 +60,12 @@ console.log("x!==y",x!==y);//true
     console.log("b<a || a>b=",b<a || a>b);//true which is or operator
     console.log("a!=b=",a!=b);//true which is not operator
 }
+//5.Terninary operator:
+let age3=25;
+let result=age3>=18 ? "adult":"not adult";
+console.log(result);
+
+
 //Conditional statements:
 let age=24;
 if(age>=18){
@@ -114,12 +120,13 @@ if(a>=b && a>=c){
     a=b;
     b=c;
     console.log("After swapping:","a=",a ,"and b=",b);
-
+}
     //without using third variable:
+{
     a=a+b;
     b=a-b;
     a=a-b;
-    print("After swapping wihout using thid variable:a=")
+    console.log("After swapping wihout using thid variable:","a=",a,"and b=",b);
     
 }
 
