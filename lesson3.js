@@ -126,3 +126,41 @@ console.log("Rupesh\nKumar");
 let one="Rupesh\tKumar";
 console.log(one.length); //13
 
+//Methods of String:
+let str5="Rupesh";
+console.log(str5);//Rupesh
+console.log(str5.length);//6
+str5.toUpperCase();
+console.log(str5);//it is unmuttable so the orignal string is not changed rather than a new string is formed;
+console.log(str5.toUpperCase());
+console.log(str5.toLocaleLowerCase());
+
+let str6="  hello world   "
+console.log(str6.trim());//trim removes the white space from the front and back of the string;
+
+let str7="Rupesh";
+console.log(str7.slice(1,5));//slice
+
+let str8="Rupesh";
+let str9="Kumar";
+console.log(str8.concat(str9));//concat
+
+let str_10="Rupesh";
+console.log(str_10.replace("u","a"));//replace
+console.log(str_10.charAt(0));//char at index
+
+
+/*Q.4:Prompt the user to enter their full name.Generate a username for them based on the input.
+start username with @,followed by thier full name and ending with the fullname length.*/
+let user_input=prompt("Enter your full name:");
+let len_name=user_input.length;
+let symbol="@";
+user_name1=user_input.concat(len_name);
+user_name=symbol.concat(user_name1)
+console.log("user_name=",user_name);//output:e.g=@rupesh6
+
+//Another method to solve the same problem:
+let user=prompt("Enter your full name:");
+user_name4="@"+user+user.length
+console.log("user_name4=",user_name4);
+
