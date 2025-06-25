@@ -40,3 +40,32 @@ const sumNum1=(x,y)=>{
 }
 let result3=sumNum1(4,4);
 console.log(result3);
+
+let arrowMulti=(a,b,c)=>{
+    console.log(a*b*c);
+}
+arrowMulti(2,2,2);
+
+let printHello=()=>{
+    console.log("hello world");
+}
+printHello();
+
+//practise question:
+//Q1.Create a function using "function" keyword that takes a string as an argument & retruns the number of vowels in the string;
+function Functionstr(letter){
+    let count=0;
+    let count1=0;
+    for(let i of letter){
+        if (i=="a" || i=="e" || i=="i" || i=="o" ||i=="u"){
+            count++;
+        }
+        else{
+            count1++;
+        }
+    }
+    console.log(count);
+    console.log(count)
+
+}
+Functionstr("rupesh");
