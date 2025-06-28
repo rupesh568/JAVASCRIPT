@@ -69,3 +69,14 @@ function Functionstr(letter){
 
 }
 Functionstr("rupesh");
+ //same question using arrow function:
+ const countLetter=(str)=>{
+    let count1=0;
+    for(let i of str){
+        if(i=="a" || i=="e" || i=="i" || i=="o" || i=="u"){
+            count1++;
+        }
+    }
+    console.log("Vowel Letters=",count1);
+ }
+ countLetter("umberalla");
