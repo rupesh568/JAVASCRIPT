@@ -80,3 +80,31 @@ Functionstr("rupesh");
     console.log("Vowel Letters=",count1);
  }
  countLetter("umberalla");
+
+ //Call Back Function:A call back function is a function that passed as an argument to another function.
+let arr=[1,2,3,4,53,3];
+arr.forEach(function printElement(val){ //val means each element of the array;
+    console.log(val);
+});
+
+//using arrow function:
+let arr2=[4,5,6,7,8];
+arr2.forEach((val)=>{
+    console.log(val);
+
+});
+
+let str_ing=["delhi","mumbai","pune"];
+str_ing.forEach((val,i,str_ing)=>{
+    console.log(val.toUpperCase(),i,str_ing);
+})
+
+/*Note:Higher order function:forEach funcition is called higher order function.A higher order function is that function that either take parameter as another function or return the function value.*/
+
+//Q2.For a given array of numbers,print the square of each value using the forEach loop.
+
+let arr4=[2,3,4,5,6,8,9];
+arr4.forEach((val)=>{
+    console.log(val**2);
+})
+
