@@ -70,7 +70,7 @@ let newArr8=arr8.reduce((result,current)=>{
 });
 console.log("Sum=",newArr8);
 
-//calculate product of all numbers of array;
+//calculate the product of all numbers of array;
 let productArr=arr8.reduce((result,current)=>{
     return result*current;
 });
