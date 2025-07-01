@@ -1,23 +1,23 @@
 // let fruit=document.querySelector("div");
-// console.log(fruit);
-// console.dir(fruit);
-// console.log(fruit.tagName);
-// console.log(fruit.innerHTML);
-// console.log(fruit.innerText);
+console.log(fruit);
+console.dir(fruit);
+console.log(fruit.tagName);
+console.log(fruit.innerHTML);
+console.log(fruit.innerText);
 
 //Note:We can change the value of it as well.
-// let heading=document.querySelector("h2");
-// console.dir(heading);
-// console.log(heading);
-// heading.innerText="Rupesh";//WE HAVE CHAGNED THE INNER TEXT
-// console.log(heading);
-// heading.innerHTML="<p>This is a paragraph</p>"//WE HAVE CHANGED THE INNER HTML
-// console.log(heading.innerHTML);
-// console.log(heading.innerText);
+let heading=document.querySelector("h2");
+console.dir(heading);
+console.log(heading);
+heading.innerText="Rupesh";//WE HAVE CHAGNED THE INNER TEXT
+console.log(heading);
+heading.innerHTML="<p>This is a paragraph</p>"//WE HAVE CHANGED THE INNER HTML
+console.log(heading.innerHTML);
+console.log(heading.innerText);
 
-// let heading5=document.querySelector("h5");
-// console.log(heading5);
-// console.log(heading5.textContent);
+let heading5=document.querySelector("h5");
+console.log(heading5);
+console.log(heading5.textContent);
 
 
 /*Practise Question:
