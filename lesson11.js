@@ -72,3 +72,6 @@ btn3.addEventListener("click",(e)=>{
 })
 
 btn3.removeEventListener("click",(handler3));
+
+
+//Practise Questions:Create a toggle button that chandes the screen to dark-mode when clicked & light-mode when clicked agin.
