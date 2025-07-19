@@ -28,29 +28,29 @@ console.log("sixth instructions");
 //     sumcallback(a,b);
 
 // }
-// calculate(1,3,printSum);
-// //2.callback function in asynchrounous:
-// setTimeout((a,b)=>{
-//     console.log(a+b);
-// },2000);
+calculate(1,3,printSum);
+//2.callback function in asynchrounous:
+setTimeout((a,b)=>{
+    console.log(a+b);
+},2000);
 
-// setTimeout(()=>{
-//     console.log("js");
-// },2000);
+setTimeout(()=>{
+    console.log("js");
+},2000);
 
-// const printValue=(a,b)=>{
-//     console.log(a+b);
-// }
-// printValue(2,3);
+const printValue=(a,b)=>{
+    console.log(a+b);
+}
+printValue(2,3);
 
-// setTimeout(()=>{
-//     printValue(3,3)
-// },5000);
+setTimeout(()=>{
+    printValue(3,3)
+},5000);
 
-// const newValue=()=>{
-//     console.log("learning js");
-// }
-// setTimeout(newValue,8000);
+const newValue=()=>{
+    console.log("learning js");
+}
+setTimeout(newValue,8000);
 
 let printSum=(a,b)=>{
     console.log(a+b);
@@ -112,11 +112,11 @@ getdata1(10,()=>{
 
 /*Promises:To solve call back hell problems we use promises;
 Promise is for eventual completion of task.Tt is an object in JS.It is a solution to callback hell.*/
-let promise=new Promise((resolve,reject)=>{
+let promise55=new Promise((resolve,reject)=>{
     console.log("I am a promise");
     reject("some error occured");
 });
-console.log(promise);
+console.log(promise55);
 
 //reslove & reject are callbacks provided by JS.
 let promise2=new Promise((resolve,reject)=>{
@@ -125,7 +125,80 @@ let promise2=new Promise((resolve,reject)=>{
 });
 console.log(promise2);
 
-function
- 
+function getdata3(getId,getNewData){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("data",getId);
+            // resolve("success");
+            reject("your promise is rejected");
+            if(getNewData){
+                getNewData();
+            }
+            
+
+        },3000);
+    });
+}
+let promise5=getdata3(44);
+console.log(promise5);
+
+//now there are two things the first one is that either our promise is fullfilled or rejected then what to do after both cases 
+
+let promise=new Promise((resolve,reject)=>{
+    console.log("This is a promise");
+    resolve("success");
+});
+console.log(promise);
+const promiseFunction=()=>{
+    new Promise((resolve,reject)=>{
+    console.log("This is a promise");
+    resolve("success");
+
+}
 
 
+
+
+
+
+const getPromise=()=>{
+    return new Promise((resolve,reject)=>{
+        console.log("This is a new promise");
+        reject("promise rejected");
+    })
+}
+
+let promise1=getPromise();
+promise1.catch((err)=>{
+    console.log("promise rejected",err);
+});
+
+function asynF(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Data 1");
+            resolve("success");
+        },4000);
+        
+    });
+};
+console.log("fetching data1")
+let promise4=asynF();
+promise4.then((res)=>{
+    console.log(res);
+});
+
+function asynFun2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Data 2");
+            resolve("success");
+
+        },4000);
+    });
+};
+console.log("fetching data2");
+let promise44=asynFun2();
+promise44.then((res)=>{
+    console.log(res);
+});
