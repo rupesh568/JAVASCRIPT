@@ -6,7 +6,7 @@ function getValue(getId){
             resolve("success");
         },2000);
     });
-};
+}
 let promise=getValue(1);
 promise.then((res)=>{
     console.log(res);
@@ -42,4 +42,51 @@ getValue(1)
         
     });
 
-//Async:It is used with the before the function keyword in function and made the function asynchronou.
+//Async:It is used with the before the function keyword in function and made the function asynchronous.It always return a promise.
+async function printHello(){
+    console.log("hello world");
+};
+
+
+function api(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("weather data");
+            resolve(200);
+        },2000);
+    });
+}
+async function getWeatherdata(){
+    console.log("getting data 1..");
+    await api();
+    console.log("getting data 2..");
+    await api();
+    console.log("getting data 3..");
+    await api();
+
+}
+
+// let weather=getWeatherdata();
+// console.log(weather);
+//await pauses the execution of its surrounding async function until the promise is settled.
+
+//Note:when we use async await then we will not use .then or .catch and vice versa;
+
+function getData22(ID){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log(ID);
+            resolve("success");
+        },2000);
+    });
+}
+
+async function getValue(){
+    console.log("getting data 1.....");
+    await getData22(1);
+    console.log("getting data 2.....");
+    await getData22(2);
+    console.log("getting data 3.....");
+    await getData22(3);
+}
+getValue();
